@@ -26,7 +26,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="./assert/css/style.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/" rel="preconnect" />
   <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin="anonymous" />
@@ -44,15 +44,74 @@
     rel="apple-touch-icon" />
   <script
     type="text/javascript">window.__WEBFLOW_CURRENCY_SETTINGS = { "currencyCode": "USD", "$init": true, "symbol": "$", "decimal": ".", "fractionDigits": 2, "group": ",", "template": "{{wf {\"path\":\"symbol\",\"type\":\"PlainText\"} }} {{wf {\"path\":\"amount\",\"type\":\"CommercePrice\"} }} {{wf {\"path\":\"currencyCode\",\"type\":\"PlainText\"} }}", "hideDecimalForWholeNumbers": false };</script>
-</head>
 
-<style>
-  .w-webflow-badge {
-    display: none !important;
-  }
-</style>
+
+    <style>
+      .w-webflow-badge {
+        display: none !important;
+      }
+      </style>
+      <style>
+    
+      .scroll-to-top {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        font-size: 25px;
+        border: none;
+        outline: none;
+        background-color: rgb(2, 96, 154);
+        color: white;
+        cursor: pointer;
+        padding: 10px 15px 10px 15px;
+        border-radius: 100%;
+    }
+    
+    .scroll-to-top:hover {
+        background-color: #888;
+    }
+    
+    /* Show button when user scrolls down */
+    @media screen and (min-height: 500px) {
+        .scroll-to-top {
+            display: none;
+        }
+        .scroll-to-top.show {
+            display: block;
+        }
+    }
+    
+    </style>
+    <script>
+      window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.querySelector(".scroll-to-top").classList.add("show");
+        } else {
+            document.querySelector(".scroll-to-top").classList.remove("show");
+        }
+    }
+    
+    /* Scroll to top when button is clicked */
+    document.querySelector(".scroll-to-top").addEventListener("click", function() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+    
+    </script>
+  </head>
+
 
 <body>
+<div>
+  <a href="index.html" class="scroll-to-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+</div>
+
   <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
     role="banner" class="navbar w-nav">
     <div class="w-layout-grid grid-navbar">
@@ -65,6 +124,7 @@
             href="technology.html" class="nav-link w-nav-link">Technology</a>
           <a href="ourservices.html" class="nav-link w-nav-link">Our Services</a>
         </nav>
+        
       </div>
 
       <div data-w-id="e8cea9b6-4627-f1cd-fec0-16ebfaf55924" class="w-layout-grid grid-button-nav"><a href="contact.html"

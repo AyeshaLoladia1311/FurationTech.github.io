@@ -90,6 +90,59 @@
         })(window, document, 'script', 'dataLayer', 'GTM-P2Q7X3R');</script>
     <!-- End Google Tag Manager -->
 
+    <style>
+
+        .scroll-to-top {
+          display: none;
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          z-index: 99;
+          font-size: 25px;
+          border: none;
+          outline: none;
+          background-color: rgb(2, 96, 154);
+          color: white;
+          cursor: pointer;
+          padding: 10px 15px 10px 15px;
+          border-radius: 100%;
+      }
+      
+      .scroll-to-top:hover {
+          background-color: #888;
+      }
+      
+      /* Show button when user scrolls down */
+      @media screen and (min-height: 500px) {
+          .scroll-to-top {
+              display: none;
+          }
+          .scroll-to-top.show {
+              display: block;
+          }
+      }
+      
+      </style>
+      <script>
+        window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              document.querySelector(".scroll-to-top").classList.add("show");
+          } else {
+              document.querySelector(".scroll-to-top").classList.remove("show");
+          }
+      }
+      
+      /* Scroll to top when button is clicked */
+      document.querySelector(".scroll-to-top").addEventListener("click", function() {
+          window.scrollTo({
+              top: 0,
+              behavior: "smooth"
+          });
+      });
+      
+      </script>
 
 
 </head>
@@ -101,6 +154,9 @@
 </style>
 
 <body>
+    <div>
+        <a href="ourservices.html" class="scroll-to-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+      </div>
     <div data-w-id="58e11b86-9d96-c9a8-f52f-b1795c37fa57"
       style="-webkit-transform:translate3d(0, 15px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 15px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 15px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 15px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
       class="glow-top"></div>
